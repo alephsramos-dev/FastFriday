@@ -11,6 +11,21 @@
         <title>Acesse o Grupo - Fast Friday</title>
     </head>
     <body>
+        <script>
+            // Validação de acesso - apenas com form submetido
+            (function() {
+                const formSubmitted = sessionStorage.getItem('fastFridayFormSubmitted');
+                
+                if (!formSubmitted || formSubmitted !== 'true') {
+                    // Redireciona para a página inicial se não enviou o form
+                    window.location.href = 'index.html';
+                    return;
+                }
+                
+                // Remove o flag após verificação para segurança
+                // sessionStorage.removeItem('fastFridayFormSubmitted');
+            })();
+        </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({
@@ -103,6 +118,12 @@
 
         <style>
             /* Estilos específicos para a página de redirecionamento */
+            
+            /* Ajusta altura da home para mostrar próxima seção */
+            .home {
+                min-height: 80vh !important;
+            }
+            
             .video-section {
                 position: relative;
                 min-height: 60vh;

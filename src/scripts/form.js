@@ -383,6 +383,9 @@ class FormManager {
         this.submitButton.disabled = false;
 
         if (result.success) {
+            // Define flag de formulário enviado
+            sessionStorage.setItem('fastFridayFormSubmitted', 'true');
+            
             // Redireciona para a página de acesso ao grupo
             window.location.href = 'redirect.html';
         } else {
