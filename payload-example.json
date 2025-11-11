@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-11-11T10:30:00.000Z",
+  "form": {
+    "name": "João da Silva",
+    "email": "joao@email.com",
+    "phone": "+55 (24) 98141-1040",
+    "phoneRaw": "5524981411040",
+    "acceptedPolicy": true
+  },
+  "tracking": {
+    "utm": {
+      "utm_source": "google",
+      "utm_medium": "cpc",
+      "utm_campaign": "fast_friday_2025",
+      "utm_term": "sistemas_construtivos",
+      "utm_content": "banner_principal"
+    },
+    "urlParams": {
+      "utm_source": "google",
+      "utm_medium": "cpc",
+      "utm_campaign": "fast_friday_2025",
+      "utm_term": "sistemas_construtivos",
+      "utm_content": "banner_principal",
+      "fbclid": "IwAR123456789",
+      "gclid": "Cj0KCQ123456789"
+    },
+    "page": {
+      "url": "https://fastsistemasconstrutivos.com.br/fast-friday?utm_source=google&utm_medium=cpc",
+      "pathname": "/fast-friday",
+      "hostname": "fastsistemasconstrutivos.com.br",
+      "referrer": "https://www.google.com/",
+      "title": "Fast Friday",
+      "timestamp": "2025-11-11T10:30:00.000Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "language": "pt-BR",
+      "screenResolution": "1920x1080",
+      "viewport": "1440x900"
+    }
+  },
+  "metadata": {
+    "formId": "fast-friday-whatsapp-group",
+    "formVersion": "1.0",
+    "source": "landing-page"
+  }
+}

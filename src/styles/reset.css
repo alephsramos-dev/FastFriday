@@ -1,0 +1,129 @@
+/* Modern CSS reset inspired by Andy Bell and Josh Comeau */
+
+* {
+	box-sizing: border-box;
+    font-family: var(--font-family-base);
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+	background: var(--color-background);
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+main {
+	min-height: 100vh;
+}
+
+p,
+blockquote,
+figure,
+dl,
+dd {
+	margin-block: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+svg {
+	fill: currentColor;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+textarea:not([rows]) {
+	min-height: 10rem;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	cursor: pointer;
+	background: none;
+	border: none;
+	color: inherit;
+}
+
+[disabled] {
+	cursor: not-allowed;
+}
+
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption {
+	text-align: left;
+}
+
+th,
+td {
+	text-align: left;
+	vertical-align: top;
+	font-weight: inherit;
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 0.7;
+}
+
+:focus-visible {
+	outline: 3px solid currentColor;
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
