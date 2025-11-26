@@ -140,21 +140,11 @@
             </h2>
 
             <div class="video-container" data-aos="zoom-in" data-aos-delay="200">
-                <!-- Placeholder para o vídeo -->
-                <div class="video-placeholder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                    <p>Vídeo será adicionado aqui</p>
-                </div>
-                <!-- Quando tiver o vídeo, substitua o placeholder por:
-                <iframe 
-                    src="URL_DO_VIDEO" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                ></iframe>
-                -->
+                <video controls preload="metadata">
+                    <source src="src/assets/tutorial.MOV" type="video/quicktime">
+                    <source src="src/assets/tutorial.MOV" type="video/mp4">
+                    Seu navegador não suporta a reprodução de vídeos.
+                </video>
             </div>
         </section>
 
@@ -164,18 +154,21 @@
             /* Ajusta altura da home para mostrar próxima seção */
             .home {
                 min-height: 80vh !important;
+                padding-bottom: 1rem !important;
             }
             
             .video-section {
                 position: relative;
                 min-height: 60vh;
+                height: auto;
                 background: #0a0a0a;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                margin-top: -32px;
                 gap: 40px;
-                padding: 5rem 2rem;
+                padding: 3rem 2rem;
             }
 
             .video-title {
@@ -197,9 +190,30 @@
                 box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
             }
 
-            .video-container iframe {
+            @media (max-width: 768px) {
+                .video-container {
+                    border-radius: 12px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .video-container {
+                    border-radius: 8px;
+                    aspect-ratio: 9 / 16;
+                }
+            }
+
+            .video-container iframe,
+            .video-container video {
                 width: 100%;
                 height: 100%;
+                object-fit: contain;
+            }
+
+            @media (max-width: 480px) {
+                .video-container video {
+                    object-fit: cover;
+                }
             }
 
             .video-placeholder {
@@ -246,13 +260,19 @@
 
             /* Responsividade para vídeo */
             @media (max-width: 768px) {
+                .home {
+                    min-height: 70vh !important;
+                    padding-bottom: 1.5rem !important;
+                }
+
                 .video-section {
-                    padding: 4rem 1.5rem;
-                    gap: 32px;
+                    padding: 2.5rem 1.5rem;
+                    gap: 28px;
+                    min-height: auto;
                 }
 
                 .video-title {
-                    font-size: 24px;
+                    font-size: 22px;
                     max-width: 90%;
                 }
 
@@ -262,17 +282,24 @@
             }
 
             @media (max-width: 480px) {
+                .home {
+                    min-height: 85vh !important;
+                    padding-bottom: 1rem !important;
+                }
+
                 .video-section {
-                    padding: 3rem 1rem;
+                    padding: 2rem 1rem;
+                    gap: 24px;
+                    min-height: auto;
                 }
 
                 .video-title {
-                    font-size: 20px;
-                    line-height: 1.3;
+                    font-size: 18px;
+                    line-height: 1.4;
                 }
 
                 .video-placeholder p {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
             }
         </style>
